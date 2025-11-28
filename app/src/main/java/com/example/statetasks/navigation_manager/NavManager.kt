@@ -13,13 +13,18 @@ import com.example.statetasks.screens.ThirdScreen
 
 @Composable
 fun NavManager(navController: NavHostController, paddingValues: PaddingValues) {
+
+    val first = "first"
+    val second = "second"
+    val third = "third"
+
     NavHost(
         modifier = Modifier.padding(paddingValues),
         navController = navController,
         startDestination = "first"
     ) {
-        composable("first") { FirstScreen(navController) }
-        composable("second") { Second(navController) }
-        composable("third") { ThirdScreen(navController) }
+        composable(first) { FirstScreen(navController) }
+        composable(second) { Second(navController) }
+        composable(third) { ThirdScreen(navController) }
     }
 }
